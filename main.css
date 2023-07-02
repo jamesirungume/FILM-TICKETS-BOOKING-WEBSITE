@@ -10,11 +10,16 @@ background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva
 }
 .otherMovies{
   position: relative;
-  left: 800px;
- color: white;
- font-weight: xx-large;
+  left: 600px;
+ color: purple;
+ background-color: black;
+ width: 900px;
+ font-weight: bolder;
+ font-size: x-large;
  display: grid;
  gap: 20px;
+ padding-left: 100px;
+
 }
 .filmin > h1 {
     color: red;
@@ -30,8 +35,30 @@ background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva
     bottom:350px;
     width: 100px;
     height: 50px;
+    
 
 }
 #james:hover {
     background-color: brown;
+}
+.otherMovies > h1 {
+    background-color: peru;
+    width: 400px;
+    border-radius: 40px;
+    color: white;
+    padding-left: 30px;
+}
+#run {
+    font-size: xx-large;
+    color: blue;
+    font-style: italic;
+}
+#filmed{
+    position: relative;
+    bottom: 70px;
+    font-style: italic;
+}
+#pic {
+    position: relative;
+    left: 400px;
 }

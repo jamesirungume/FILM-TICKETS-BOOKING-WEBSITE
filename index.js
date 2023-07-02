@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Get the element with class "filmin"
     const myfilm = document.querySelector(".filmin");
   
+    // Fetch movie data from the server
     function fetchMovieData() {
       return fetch("http://localhost:3000/films")
         .then(resp => resp.json())
@@ -9,9 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   
+    // Display movie data in the DOM
     function displayMovieData(movie) {
       const list = document.createElement("li");
       const title = document.createElement("p");
+      title.id = "run"
       title.textContent = `${movie.title}`;
       list.appendChild(title);
   
@@ -32,33 +36,37 @@ document.addEventListener("DOMContentLoaded", () => {
       list.appendChild(ticketsSold);
   
       const mybutton = document.createElement("button");
+      mybutton.id = "james";
       mybutton.textContent = "Buy Ticket";
       mybutton.addEventListener("click", () => {
+        // Increment ticket sales if capacity is not reached
         if (movie.tickets_sold < movie.capacity) {
-          buyTicket(movie.id)
-            .then(updatedMovie => {
-              ticketsSold.textContent = `Tickets Sold: ${updatedMovie.tickets_sold}`;
-            })
-            .catch(error => {
-              console.error("Error buying ticket:", error);
-            });
-        } else {
-          console.log("Ticket capacity reached. No more tickets available.");
+          movie.tickets_sold++;
+          ticketsSold.textContent = `Tickets Sold: ${movie.tickets_sold}`;
+  
+          // Disable button and update text if sold out
+        if (movie.tickets_sold === movie.capacity) {
+            mybutton.disabled = true;
+            mybutton.textContent = "Sold Out";
+          }
         }
       });
       list.appendChild(mybutton);
   
       const description = document.createElement("p");
+      description.id = "filmed"
       description.textContent = `Description: ${movie.description}`;
       list.appendChild(description);
   
       const poster = document.createElement("img");
+      poster.id = "pic"
       poster.src = movie.poster;
       list.appendChild(poster);
   
       myfilm.appendChild(list);
     }
   
+    // Buy ticket for a movie
     function buyTicket(movieId) {
       return fetch(`http://localhost:3000/films/${movieId}/buy`, {
         method: "POST",
@@ -72,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   
+    // Fetch movie data and handle click events
     fetchMovieData().then(movies => {
       const movieElements = document.querySelectorAll(".otherMovies > div");
       movieElements.forEach((movieElement, index) => {
