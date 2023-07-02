@@ -1,0 +1,19 @@
+{
+  "name": "films",
+  "version": "1.0.0",
+  "description": "buy film's tickrts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesirungume/CODE-CHALLENGE-WEEK-3.git"
+  },
+  "author": "james irungu.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesirungume/CODE-CHALLENGE-WEEK-3/issues"
+  },
+  "homepage": "https://github.com/jamesirungume/CODE-CHALLENGE-WEEK-3#readme"
+}
