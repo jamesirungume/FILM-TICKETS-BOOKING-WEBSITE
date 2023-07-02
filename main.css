@@ -1,0 +1,21 @@
+.relative {
+background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva-white-handwritten-love-on-black-background-canvas-pFgXq0m2LjA.jpg');
+}
+.filmin{
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+.otherMovies{
+  position: relative;
+  left: 800px;
+ color: white;
+ font-weight: xx-large;
+ display: grid;
+ gap: 20px;
+}
+.filmin > h1 {
+    color: red;
+}
