@@ -1,5 +1,5 @@
 .relative {
-background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva-white-handwritten-love-on-black-background-canvas-pFgXq0m2LjA.jpg');
+background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva-white-handwritten-love-on-black-background-canvas-pFgXq0m2LjA.jpg'); 
 
 }
 .filmin{
@@ -16,13 +16,14 @@ background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva
 height: 2000px;
  color: white;
  background-color: black;
- width: 2000px;
+ width: 500px;
  font-weight: bolder;
  font-size: xx-large;
  display: grid;
  gap: 60px;
  padding-left: 100px;
  margin-top: 0%;
+ 
  
  
  
@@ -102,3 +103,14 @@ height: 2000px;
     padding: 10px;
    
 }
+#watching{
+    width: 900px;
+}
+.otherMovies div {
+    border-bottom: 1px solid white;
+
+  }
+  .otherMovies{
+    border-left:  1px solid white;
+  }
+ 
