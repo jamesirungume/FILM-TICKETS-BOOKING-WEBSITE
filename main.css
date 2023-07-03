@@ -1,5 +1,6 @@
 .relative {
 background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva-white-handwritten-love-on-black-background-canvas-pFgXq0m2LjA.jpg');
+
 }
 .filmin{
     color: white;
@@ -13,8 +14,8 @@ background-image: url('https://marketplace.canva.com/EAEH7oTckGg/1/0/1067w/canva
   bottom: 2350px;
   left: 1200px;
 height: 2000px;
- color: black;
- background-color: yellow;
+ color: white;
+ background-color: black;
  width: 2000px;
  font-weight: bolder;
  font-size: xx-large;
@@ -22,6 +23,8 @@ height: 2000px;
  gap: 60px;
  padding-left: 100px;
  margin-top: 0%;
+ 
+ 
  
 
 }
@@ -85,7 +88,7 @@ height: 2000px;
 
 }
 #movied{
-    background-color: darkblue;
+ 
     color: black;
     width: 5000px;
     padding-left: 20px;
