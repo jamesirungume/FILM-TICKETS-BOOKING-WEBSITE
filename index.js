@@ -14,27 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // Display movie data in the DOM
     function displayMovieData(movie) {
       const list = document.createElement("li");
+      list.id ="movied"
       const title = document.createElement("p");
       title.id = "run"
       title.textContent = `${movie.title}`;
+      
       list.appendChild(title);
   
       const runtime = document.createElement("p");
       runtime.textContent = `Runtime: ${movie.runtime} minutes`;
       list.appendChild(runtime);
-  
+      runtime.classList = 'watch'
       const capacity = document.createElement("p");
       capacity.textContent = `Capacity: ${movie.capacity}`;
       list.appendChild(capacity);
-  
+      capacity.classList = 'watch'
       const showtime = document.createElement("p");
       showtime.textContent = `Showtime: ${movie.showtime}`;
       list.appendChild(showtime);
-  
+      showtime.classList = 'watch'
       const ticketsSold = document.createElement("p");
       ticketsSold.textContent = `Tickets Sold: ${movie.tickets_sold}`;
       list.appendChild(ticketsSold);
-  
+      ticketsSold.classList = 'watch'
       const mybutton = document.createElement("button");
       mybutton.id = "james";
       mybutton.textContent = "Buy Ticket";
@@ -55,11 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const description = document.createElement("p");
       description.id = "filmed"
+      description.classList = 'watch'
       description.textContent = `Description: ${movie.description}`;
+
       list.appendChild(description);
   
       const poster = document.createElement("img");
       poster.id = "pic"
+    
       poster.src = movie.poster;
       list.appendChild(poster);
   
@@ -89,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
           displayMovieData(movie);
         });
       });
+      movieElements[0].click();
     });
   });
   
